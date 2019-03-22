@@ -91,6 +91,8 @@
     <Compile Include="Tests\SearchFunctionality.cs" />
     <Compile Include="Tests\SliderFeature.cs" />
     <Compile Include="Pages\Slider.cs" />
+    <Compile Include="Pages\HeaderSection.cs" />
+    <Compile Include="Pages\SignInPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

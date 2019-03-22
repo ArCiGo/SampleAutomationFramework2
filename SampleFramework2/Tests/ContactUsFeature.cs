@@ -20,5 +20,19 @@ namespace SampleFramework2
             Assert.IsTrue(contactUsPage.IsLoaded,
                 "The contact us page did not open susccessfully");
         }
+
+        [Test]
+        [Property("Author", "ArCiGo")]
+        [Description("Validate that the contact us page opens when clicking the Contact Us button")]
+        public void TCID4()
+        {
+            var homePage = new HomePage(Driver);
+            homePage.GoTo();
+
+            Assert.IsTrue(homePage.IsLoaded, "Home page did not open successfully");
+
+            var contactUsPage = homePage.Header.ClickContactUsButton();
+            Assert.IsTrue(contactUsPage.IsLoaded, "The Contact Us page didn't open successfully");
+        }
     }
 }

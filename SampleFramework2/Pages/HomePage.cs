@@ -6,14 +6,22 @@ namespace SampleFramework2
 {
     public class HomePage : BaseApplicationPage
     {
-        private static Logger _logger = LogManager.GetCurrentClassLogger();
-
         public HomePage(IWebDriver driver) : base(driver) 
         {
             Slider = new Slider(driver);
         }
 
         public Slider Slider { get; set; }
+        public bool IsLoaded
+        {
+            get
+            {
+                var isLoaded = Driver.Url.Contains("http://automationpractice.com/index.php");
+
+                return isLoaded;
+            }
+        }
+        public HeaderSection Header => new HeaderSection(Driver);
 
         public void GoTo()
         {
