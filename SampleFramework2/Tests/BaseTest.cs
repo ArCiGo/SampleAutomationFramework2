@@ -83,6 +83,7 @@ namespace SampleFramework2
         {
             var factory = new WebDriverFactory();
             Driver = factory.Create(BrowserType.Chrome);
+            Driver.Manage().Window.Maximize();
         }
 
         /*
